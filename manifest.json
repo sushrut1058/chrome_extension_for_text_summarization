@@ -1,0 +1,23 @@
+{
+    "name": "Summarize",
+    "version": "1.0.0",
+    "description": "Summarize",
+    "manifest_version": 3,
+    "author": "Sushrut Hundikar",
+    "action":{
+        "default_popup": "index.html",
+        "default_title": "Main"
+    },
+    "background":{
+        "service_worker": "background.js"
+    },
+    "permissions": ["storage","activeTab","contextMenus","tabs"],
+    "content_scripts":[
+        {
+            "matches": ["<all_urls>"],
+            "js": ["content.js"]
+        }
+    ]
+
+    
+}
